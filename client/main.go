@@ -7,7 +7,6 @@ import (
 	"github.com/networld-to/philips-hue-client/bridge"
 )
 
-
 func TestGetLights() {
 	fmt.Println("---- BEGIN: GetLights()")
 	lights, resp, err := bridge.GetLights()

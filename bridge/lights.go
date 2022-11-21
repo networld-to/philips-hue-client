@@ -30,7 +30,7 @@ func GetLight(id string) (lights *Lights, resp *http.Response, err error) {
 
 func SwitchOn(id string) (respBody []byte, resp *http.Response, err error) {
 	var control = &OnOff{
-		On: On{ On: true},
+		On: On{On: true},
 	}
 	var endpoint = fmt.Sprintf("%s/resource/light/%s", apiEndpointPrefix, id)
 
@@ -42,11 +42,10 @@ func SwitchOn(id string) (respBody []byte, resp *http.Response, err error) {
 	respBody, resp, err = putCall(endpoint, jsonBody)
 	return
 }
-
 
 func SwitchOff(id string) (respBody []byte, resp *http.Response, err error) {
 	var control = &OnOff{
-		On: On{ On: false},
+		On: On{On: false},
 	}
 	var endpoint = fmt.Sprintf("%s/resource/light/%s", apiEndpointPrefix, id)
 
@@ -58,7 +57,6 @@ func SwitchOff(id string) (respBody []byte, resp *http.Response, err error) {
 	respBody, resp, err = putCall(endpoint, jsonBody)
 	return
 }
-
 
 func ChangeLightState(id string, control *LightControl) (respBody []byte, resp *http.Response, err error) {
 	var endpoint = fmt.Sprintf("%s/resource/light/%s", apiEndpointPrefix, id)
