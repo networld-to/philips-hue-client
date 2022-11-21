@@ -1,5 +1,8 @@
 # Philips Hue API v2 Client
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/networld-to/philips-hue-client)](https://goreportcard.com/report/github.com/networld-to/philips-hue-client)
+[![Godoc](https://godoc.org/github.com/networld-to/philips-hue-client?status.svg)](https://pkg.go.dev/github.com/networld-to/philips-hue-client/bridge)
+
 The Philips Hue API is provided by a local bridge device that is connected to
 the local network via ethernet cable (not PoE powered). This client implementation
 in golang implements the second generation of this local Philips Hue API.
