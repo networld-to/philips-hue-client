@@ -51,5 +51,6 @@ func TestGetRooms() {
 
 func main() {
 	TestGetLights()
+	fmt.Println()
 	TestGetRooms()
 }

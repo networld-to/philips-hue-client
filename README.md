@@ -58,6 +58,20 @@ $ go mod tidy
 $ go run main.go
 ```
 
+## Security Scanning and Patching
+
+```bash
+# SAST Scanning, install via https://github.com/securego/gosec
+$ gosec ./...
+
+# Vulnerability and Secret Scanning, install via https://aquasecurity.github.io/trivy
+$ trivy fs .
+
+# Udate dependencies (if any)
+$ go get -u ./...
+$ go mod tidy
+```
+
 ## Functionality
 
 * Lights

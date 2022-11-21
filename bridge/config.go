@@ -15,6 +15,7 @@ func LoadHueBridgeConfig() (hueBridge Bridge) {
 	if err == nil {
 		prefix = usr.HomeDir
 	}
+	/* #nosec G304 */
 	content, err := os.ReadFile(prefix + "/.philips-hue.json")
 	if err != nil {
 		log.Fatal(err)

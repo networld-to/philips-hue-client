@@ -20,7 +20,7 @@ type Lights struct {
 			Name      string `json:"name"`
 			Archetype string `json:"archetype"`
 		} `json:"metadata"`
-		On On
+		On      On
 		Dimming struct {
 			Brightness  float64 `json:"brightness"`
 			MinDimLevel float64 `json:"min_dim_level"`
@@ -38,7 +38,7 @@ type Lights struct {
 		ColorTemperatureDelta struct {
 		} `json:"color_temperature_delta"`
 		Color struct {
-			Xy Xy
+			Xy    Xy
 			Gamut struct {
 				Red struct {
 					X float64 `json:"x"`
@@ -78,9 +78,9 @@ type OnOff struct {
 
 type LightControl struct {
 	// On/Off state of the light on=true, off=false
-	On On `json:"on,omitempty"`
-	Dimming Dimming `json:"dimming,omitempty"`
-	Color Color `json:"color,omitempty"`
+	On               On               `json:"on,omitempty"`
+	Dimming          Dimming          `json:"dimming,omitempty"`
+	Color            Color            `json:"color,omitempty"`
 	ColorTemperature ColorTemperature `json:"color_temperature,omitempty"`
 }
 
@@ -90,7 +90,7 @@ type On struct {
 
 type Dimming struct {
 	// Brightness percentage. value cannot be 0, writing 0 changes it to lowest possible brightness
-	Brightness  float64 `json:"brightness,omitempty"`
+	Brightness float64 `json:"brightness,omitempty"`
 }
 
 type Color struct {
@@ -138,8 +138,8 @@ type Groups struct {
 			Rid   string `json:"rid"`
 			Rtype string `json:"rtype"`
 		} `json:"owner"`
-		On On
-		Dimming Dimming
+		On           On
+		Dimming      Dimming
 		DimmingDelta struct {
 		} `json:"dimming_delta"`
 		ColorTemperature struct {

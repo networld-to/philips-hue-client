@@ -28,12 +28,11 @@ func GetGroup(id string) (groups *Groups, resp *http.Response, err error) {
 	return
 }
 
-
 // SwitchGroupOn accepts the group ID (uuid) as input and switches all the
 // associated lights on, uses the previous light settings
 func SwitchGroupOn(id string) (respBody []byte, resp *http.Response, err error) {
 	var control = &OnOff{
-		On: On{ On: true},
+		On: On{On: true},
 	}
 	var endpoint = fmt.Sprintf("%s/resource/grouped_light/%s", apiEndpointPrefix, id)
 
@@ -50,7 +49,7 @@ func SwitchGroupOn(id string) (respBody []byte, resp *http.Response, err error) 
 // associated lights off
 func SwitchGroupOff(id string) (respBody []byte, resp *http.Response, err error) {
 	var control = &OnOff{
-		On: On{ On: false},
+		On: On{On: false},
 	}
 	var endpoint = fmt.Sprintf("%s/resource/grouped_light/%s", apiEndpointPrefix, id)
 
@@ -62,7 +61,6 @@ func SwitchGroupOff(id string) (respBody []byte, resp *http.Response, err error)
 	respBody, resp, err = putCall(endpoint, jsonBody)
 	return
 }
-
 
 // ChangeGroupState allows the switching on and off of light groups by providing
 // additionally color, brightness and other settings.
